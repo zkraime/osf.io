@@ -8,11 +8,14 @@ var $ = require('jquery');
 var ko = require('knockout');
 var bootbox = require('bootbox');
 var Raven = require('raven-js');
-require('knockout-punches');
-ko.punches.enableAll();
+require('bootstrap-editable');
+require('knockout.punches');
 
-var osfHelpers = require('osfHelpers');
+var osfHelpers = require('./osfHelpers');
 var NodeActions = require('./project.js');
+
+$.ajaxSetup({cache: false});
+ko.punches.enableAll();
 
 // Modal language
 var MESSAGES = {
