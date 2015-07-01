@@ -63,7 +63,11 @@
                             <li><a href="${node['url']}contributors/">Sharing</a></li>
                         % endif
 
+<<<<<<< HEAD
                         % if not node['is_registration'] or (node['is_registration'] and 'admin' in user['permissions']):
+=======
+                        % if user['has_read_permissions'] and not node['is_registration'] or (node['is_registration'] and 'admin' in user['permissions']):
+>>>>>>> d7854c833fbc8530a0865851d2f51ce3d8af3798
                             <li><a href="${node['url']}settings/">Settings</a></li>
                         % endif
 

@@ -1,9 +1,12 @@
 # -*- coding: utf-8 -*-
 from nose.tools import *  # flake8: noqa
 
-from framework.auth.core import Auth
 from website.models import Node
+<<<<<<< HEAD
 from tests.base import ApiTestCase, fake
+=======
+from tests.base import ApiTestCase
+>>>>>>> d7854c833fbc8530a0865851d2f51ce3d8af3798
 from api.base.settings.defaults import API_BASE
 from tests.factories import UserFactory, ProjectFactory, FolderFactory, DashboardFactory
 
@@ -11,14 +14,14 @@ from tests.factories import UserFactory, ProjectFactory, FolderFactory, Dashboar
 class TestUsers(ApiTestCase):
 
     def setUp(self):
-        ApiTestCase.setUp(self)
+        super(TestUsers, self).setUp()
         self.user_one = UserFactory.build()
         self.user_one.save()
         self.user_two = UserFactory.build()
         self.user_two.save()
 
     def tearDown(self):
-        ApiTestCase.tearDown(self)
+        super(TestUsers, self).tearDown()
         Node.remove()
 
     def test_returns_200(self):
@@ -75,7 +78,7 @@ class TestUsers(ApiTestCase):
 class TestUserDetail(ApiTestCase):
 
     def setUp(self):
-        ApiTestCase.setUp(self)
+        super(TestUserDetail, self).setUp()
         self.user_one = UserFactory.build()
         self.user_one.set_password('justapoorboy')
         self.user_one.social['twitter'] = 'howtopizza'
@@ -87,7 +90,7 @@ class TestUserDetail(ApiTestCase):
         self.auth_two = (self.user_two.username, 'justapoorboy')
 
     def tearDown(self):
-        ApiTestCase.tearDown(self)
+        super(TestUserDetail, self).tearDown()
         Node.remove()
 
     def test_gets_200(self):
@@ -119,7 +122,7 @@ class TestUserDetail(ApiTestCase):
 class TestUserNodes(ApiTestCase):
 
     def setUp(self):
-        ApiTestCase.setUp(self)
+        super(TestUserNodes, self).setUp()
         self.user_one = UserFactory.build()
         self.user_one.set_password('justapoorboy')
         self.user_one.social['twitter'] = 'howtopizza'
@@ -129,17 +132,31 @@ class TestUserNodes(ApiTestCase):
         self.user_two.set_password('justapoorboy')
         self.user_two.save()
         self.auth_two = (self.user_two.username, 'justapoorboy')
-        self.public_project_user_one = ProjectFactory(title="Public Project User One", is_public=True, creator=self.user_one)
-        self.private_project_user_one = ProjectFactory(title="Private Project User One", is_public=False, creator=self.user_one)
-        self.public_project_user_two = ProjectFactory(title="Public Project User Two", is_public=True, creator=self.user_two)
-        self.private_project_user_two = ProjectFactory(title="Private Project User Two", is_public=False, creator=self.user_two)
-        self.deleted_project_user_one = FolderFactory(title="Deleted Project User One", is_public=False, creator=self.user_one, is_deleted=True)
+        self.public_project_user_one = ProjectFactory(title="Public Project User One",
+                                                      is_public=True,
+                                                      creator=self.user_one)
+        self.private_project_user_one = ProjectFactory(title="Private Project User One",
+                                                       is_public=False,
+                                                       creator=self.user_one)
+        self.public_project_user_two = ProjectFactory(title="Public Project User Two",
+                                                      is_public=True,
+                                                      creator=self.user_two)
+        self.private_project_user_two = ProjectFactory(title="Private Project User Two",
+                                                       is_public=False,
+                                                       creator=self.user_two)
+        self.deleted_project_user_one = FolderFactory(title="Deleted Project User One",
+                                                      is_public=False,
+                                                      creator=self.user_one,
+                                                      is_deleted=True)
         self.folder = FolderFactory()
-        self.deleted_folder = FolderFactory(title="Deleted Folder User One", is_public=False, creator=self.user_one, is_deleted=True)
+        self.deleted_folder = FolderFactory(title="Deleted Folder User One",
+                                            is_public=False,
+                                            creator=self.user_one,
+                                            is_deleted=True)
         self.dashboard = DashboardFactory()
 
     def tearDown(self):
-        ApiTestCase.tearDown(self)
+        super(TestUserNodes, self).tearDown()
         Node.remove()
 
     def test_authorized_in_gets_200(self):

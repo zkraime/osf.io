@@ -288,7 +288,11 @@ MEETING_DATA = {
     'IARR2016': {
         'name': 'International Association for Relationship Research 2016',
         'info_url': 'http://iarr.psych.utoronto.ca/',
+<<<<<<< HEAD
         'logo_url': 'http://iarr.psych.utoronto.ca/iarrV2.jpg',
+=======
+        'logo_url': None,
+>>>>>>> d7854c833fbc8530a0865851d2f51ce3d8af3798
         'active': True,
         'admins': [],
         'public_projects': True,
@@ -300,7 +304,19 @@ MEETING_DATA = {
         'active': True,
         'admins': [],
         'public_projects': True,
+<<<<<<< HEAD
     },    
+=======
+    },
+    'PsiChiRepository': {
+        'name': 'Psi Chi Repository',
+        'info_url': None,
+        'logo_url': None,
+        'active': True,
+        'admins': [],
+        'public_projects': True,
+    },
+>>>>>>> d7854c833fbc8530a0865851d2f51ce3d8af3798
 }
 
 

@@ -97,14 +97,22 @@
                             <label for="title">Title:</label>
                             <input class="form-control" type="text" maxlength="200" data-bind="value: title,
                                                                                                       valueUpdate: 'afterkeydown'">
+<<<<<<< HEAD
                             <span class="text-danger" id="title-input-message"></span>
+=======
+                            <span class="text-danger" id="titleInputMessage"></span>
+>>>>>>> d7854c833fbc8530a0865851d2f51ce3d8af3798
                         </div>
                         <div class="form-group">
                             <label for="description">Description:</label>
                             <textarea data-bind="value: description,
                                              valueUpdate: 'afterkeydown'",
                             class="form-control resize-vertical"></textarea>
+<<<<<<< HEAD
                             <span class="text-danger" id="description-input-message"></span>
+=======
+                            <span class="text-danger" id="descriptionInputMessage"></span>
+>>>>>>> d7854c833fbc8530a0865851d2f51ce3d8af3798
                         </div>
                             <button data-bind="css: {disabled: !dirtyTitleDescription()},
                                            click: updateTitle"

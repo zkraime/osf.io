@@ -290,6 +290,7 @@ class TestArchiverTasks(ArchiverTestCase):
             )
         ))
 
+<<<<<<< HEAD
     @httpretty.activate
     def test_make_copy_request_20X(self):
         def callback_OK(request, uri, headers):
@@ -312,6 +313,8 @@ class TestArchiverTasks(ArchiverTestCase):
                               })
         assert(mock_callback.called_with(self.dst))
 
+=======
+>>>>>>> d7854c833fbc8530a0865851d2f51ce3d8af3798
 class TestArchiverUtils(ArchiverTestCase):
 
     @mock.patch('framework.tasks.handlers.enqueue_task')

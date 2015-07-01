@@ -13,6 +13,7 @@ var preRegisterMessage =  function(title, parentTitle, parentUrl, category) {
             '</b> including all components and data within it. This will <b>not</b> register' +
             ' its parent, <b>' + parentTitle + '</b>.' +
             ' If you want to register the parent, please go <a href="' +
+<<<<<<< HEAD
             parentUrl + '">here.</a>' +
             // TODO(hrybacki): Remove once Retraction/Embargoes goes is merged into production
             '<hr /><b>Important Note:</b> As early as <u>June 8, 2015</u>, registrations ' +
@@ -21,11 +22,15 @@ var preRegisterMessage =  function(title, parentTitle, parentUrl, category) {
             'registration. If you register before June 8, 2015 and leave your ' +
             'registration private, then the registration can remain private. After June 8, 2015, ' +
             'if you ever make it public, you will not be able to return it to private. ';
+=======
+            parentUrl + '">here.</a> After selecting OK, you will next select a registration form.';
+>>>>>>> d7854c833fbc8530a0865851d2f51ce3d8af3798
     } else {
         return 'You are about to register <b>' + title + '</b> ' +
             'including all components and data within it. ' +
             'Registration creates a permanent, time-stamped, uneditable version ' +
             'of the project. If you would prefer to register only one particular ' +
+<<<<<<< HEAD
             'component, please navigate to that component and then initiate registration.' +
             // TODO(hrybacki): Remove once Retraction/Embargoes goes is merged into production
             '<hr /><b>Important Note:</b> As early as <u>June 8, 2015</u>, registrations ' +
@@ -34,6 +39,10 @@ var preRegisterMessage =  function(title, parentTitle, parentUrl, category) {
             'registration. If you register before June 8, 2015 and leave your ' +
             'registration private, then the registration can remain private. After June 8, 2015, ' +
             'if you ever make it public, you will not be able to return it to private.';
+=======
+            'component, please navigate to that component and then initiate registration. ' +
+            'After selecting OK, you will next select a registration form.';
+>>>>>>> d7854c833fbc8530a0865851d2f51ce3d8af3798
     }
 };
 

@@ -80,10 +80,17 @@ var NodeCategoryTitleDescriptionSettings = oop.extend(
             });
         },
         updateTitleError: function() {
+<<<<<<< HEAD
            $('#title-input-message').html('Title cannot be blank.');
         },
         updateDescriptionError: function() {
             $('#description-input-message').html('Error updating description, please try again.'+
+=======
+           $('#titleInputMessage').html('Title cannot be blank.');
+        },
+        updateDescriptionError: function() {
+            $('#descriptionInputMessage').html('Error updating description, please try again.'+
+>>>>>>> d7854c833fbc8530a0865851d2f51ce3d8af3798
             ' If the problem persists, email <a href="mailto:support@osf.io">support@osf.io</a>.');
         },
 
